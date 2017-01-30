@@ -36,7 +36,7 @@ def readconf():
             r.name=rice['name']
             r.author=rice['author']
             r.version=rice['version']
-        elif section == 'Deps':
+        elif section == 'Dep':
             r.deps=ConfigSectionMap(section)
         else:
             s = Section()
