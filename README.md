@@ -1,6 +1,6 @@
 #autorice
 
-autorice creates a way for unix rices to be shared between people and easily installed with minimal setup.
+autorice creates a way for unix theme configurations or "rices" to be shared between people and easily installed with minimal setup.
 
 
 ##Rices
@@ -20,10 +20,18 @@ author: alec-chan
 name: example-rice
 version: 1.0.0
 
+;the keys under the [Dep] header can be arbitrarily named, only the values have any importance.  
+;Here I used 0-n as the keys but it really does not matter what they are.
+;Currently the dependency checker only checks if the binary specified in the value is installed on the system 
+;using the which command.  This means that the values have to match the names of the dependencies exactly.
+;If any dependencies are not installed, the program will simply throw an error telling the user which dependencies
+;need to be installed.
 [Dep]
 0: conky
 1: i3wm
 
+;maps to the directory /example-rice/Conky/
+;can be arbitrarily named as long as it contains the name of an existing directory (case sensitive)
 [Conky]
 conky.conf: ~/.config/conky/conky.conf
 i3.conf: ~/.config/i3/i3.conf
