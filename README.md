@@ -32,8 +32,13 @@ version: 1.0.0
 
 ;maps to the directory /example-rice/Conky/
 ;can be arbitrarily named as long as it contains the name of an existing directory (case sensitive)
+;In these user defined sections, the key should match up to a file within the directory that the section maps to.
+;The value defines where the symlink will point to.
 [Conky]
 conky.conf: ~/.config/conky/conky.conf
+
+;maps to /example-rice/i3/
+[i3]
 i3.conf: ~/.config/i3/i3.conf
 ```
 
